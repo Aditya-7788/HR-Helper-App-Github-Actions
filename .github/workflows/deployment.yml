@@ -1,0 +1,26 @@
+name: Deploy HR-Helper Application
+
+on:
+  push:
+    branches:
+      - main
+
+
+jobs: 
+  deploy:
+    runs-on : ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Deploy Via SSH
+        uses: appleboy/ssh-action@v0.1.5
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: aditya
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd /home/aditya/HR-Helper-App-Github-Actions
+            git pull
+            docker-compose down
+            docker-compose up -d --build
