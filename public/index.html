@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f8f9fc" />
+    <meta name="description" content="Spend less time managing HR and more time growing your people with PeoplePulse." />
+    <title>PeoplePulse — People, made simpler.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700;750;800&family=Plus+Jakarta+Sans:wght@400;500;600;650;700;750;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#" data-page="Dashboard" aria-label="PeoplePulse home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 36 36" fill="none"><path d="M8 24.5 15.5 10l5 10 3.5-6.5L28 24.5" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="28" cy="10" r="3" fill="#FFC96B"/></svg>
+          </span>
+          <span class="brand-copy">people<span>pulse</span><small>PEOPLE OPERATIONS</small></span>
+        </a>
+
+        <button class="workspace-switcher" type="button" aria-label="Switch workspace">
+          <span class="workspace-avatar">L</span>
+          <span class="workspace-copy"><strong>Layers Studio</strong><small>Free plan</small></span>
+          <svg class="switcher-chevron" viewBox="0 0 20 20" aria-hidden="true"><path d="m6 8 4 4 4-4" /></svg>
+        </button>
+
+        <span class="nav-caption">WORKSPACE</span>
+        <nav class="nav-main" aria-label="Main navigation">
+          <button class="nav-link active" type="button" data-page="Dashboard"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.8"/><rect x="13.5" y="3.5" width="7" height="4" rx="1.8"/><rect x="13.5" y="11.5" width="7" height="9" rx="1.8"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.8"/></svg><span>Dashboard</span></button>
+          <button class="nav-link" type="button" data-page="People"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 20v-1.8a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4V20"/><circle cx="9.5" cy="7.5" r="4"/><path d="M16 4a4 4 0 0 1 0 7.7M21 20v-1.8a4 4 0 0 0-3-3.87"/></svg><span>People</span><span class="nav-count" id="people-count">08</span></button>
+          <button class="nav-link" type="button" data-page="Time off"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M16 3v4M8 3v4M3 10h18m-9 4-2 2 2 2m2-4 2 2-2 2"/></svg><span>Time off</span><span class="nav-count nav-count-alert" id="leave-count">03</span></button>
+          <button class="nav-link" type="button" data-page="Payroll"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3 10h18m-13 5h4"/></svg><span>Payroll</span></button>
+          <button class="nav-link" type="button" data-page="Reports"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5V11m5.3 8.5V5m5.4 14.5V9m5.3 10.5V3"/></svg><span>Reports</span></button>
+        </nav>
+
+        <span class="nav-caption tools-caption">YOUR TOOLS</span>
+        <nav class="nav-main" aria-label="Tools">
+          <button class="nav-link" type="button" data-page="Inbox"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4.5h16v15H4z"/><path d="M4 14h4l2 2h4l2-2h4M8 9h8"/></svg><span>Inbox</span><span class="inbox-indicator"></span></button>
+          <button class="nav-link" type="button" data-page="Settings"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="m19.4 15 .1.1a2 2 0 1 1-2.8 2.8l-.1-.1a2 2 0 0 0-3.4 1.4v.3a2 2 0 1 1-4 0v-.2A2 2 0 0 0 5.8 17l-.2.1a2 2 0 1 1-2.8-2.8l.1-.1a2 2 0 0 0-1.4-3.4H1.3a2 2 0 1 1 0-4h.2A2 2 0 0 0 3 4.2l-.1-.2a2 2 0 1 1 2.8-2.8l.1.1a2 2 0 0 0 3.4-1.4V-.3a2 2 0 1 1 4 0v.2a2 2 0 0 0 3.4 1.4l.2-.1a2 2 0 1 1 2.8 2.8l-.1.1a2 2 0 0 0 1.4 3.4h.3a2 2 0 1 1 0 4h-.2a2 2 0 0 0-1.4 3.5Z" transform="translate(1.2 2) scale(.9)"/></svg><span>Settings</span></button>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="upgrade-card">
+            <div class="upgrade-sparkle" aria-hidden="true">✳</div>
+            <strong>More room to grow</strong>
+            <p>Get more from your people with our Pro plan.</p>
+            <button type="button" class="upgrade-button" data-toast="You're already making great things happen. Talk to us to explore Pro.">Explore Pro <span>↗</span></button>
+          </div>
+          <button class="sidebar-profile" type="button" aria-label="Profile for Alex Morgan">
+            <span class="profile-avatar">AM<span class="online-dot"></span></span>
+            <span class="profile-copy"><strong>Alex Morgan</strong><small>HR Administrator</small></span>
+            <svg class="profile-more" viewBox="0 0 20 20" aria-hidden="true"><circle cx="4" cy="10" r="1" fill="currentColor"/><circle cx="10" cy="10" r="1" fill="currentColor"/><circle cx="16" cy="10" r="1" fill="currentColor"/></svg>
+          </button>
+        </div>
+      </aside>
+
+      <main class="main-panel" id="main-content">
+        <header class="topbar">
+          <button class="mobile-menu icon-button" id="mobile-menu" type="button" aria-label="Open navigation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+          <div class="breadcrumbs"><span>Workspace</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg><strong id="breadcrumb-page">Dashboard</strong></div>
+          <div class="topbar-actions">
+            <span class="date-chip"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="4" width="14" height="13" rx="2"/><path d="M6.5 2.5v3M13.5 2.5v3M3 8h14"/></svg><span id="current-date">Monday, October 14</span></span>
+            <button class="icon-button notification-button" id="notification-button" type="button" aria-label="Notifications"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg><span class="notification-dot"></span></button>
+            <button class="top-avatar" type="button" aria-label="Alex Morgan profile">AM</button>
+          </div>
+        </header>
+
+        <section class="page-content" id="page-content" aria-live="polite">
+          <div class="page-heading">
+            <div><div class="eyebrow"><span class="live-dot"></span> YOUR PEOPLE, AT A GLANCE</div><h1 id="greeting">Good morning, Alex <span class="wave">✳</span></h1><p>Here's what's happening with your team today.</p></div>
+            <button class="primary-button" id="add-employee-button" type="button"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg>Add employee</button>
+          </div>
+
+          <section class="metrics-grid" aria-label="Team overview">
+            <article class="metric-card metric-people">
+              <div class="metric-top"><span class="metric-label">Total employees</span><span class="metric-icon icon-lavender"><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M15 18v-1.6a3.4 3.4 0 0 0-3.4-3.4H6.4A3.4 3.4 0 0 0 3 16.4V18"/><circle cx="9" cy="6.5" r="3.5"/><path d="M15 4a3.5 3.5 0 0 1 0 6.8m3 7.2v-1.6a3.4 3.4 0 0 0-2.6-3.3"/></svg></span></div>
+              <div class="metric-number-row"><strong class="metric-number" id="total-employees">248</strong><span class="trend-chip"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m3 11 4-4 3 3 4-5m-4 0h4v4"/></svg>12.5%</span></div>
+              <div class="metric-footnote">vs. last month <span>·</span> <button type="button" data-page="People">View all employees <span>↗</span></button></div>
+              <div class="mini-bars people-bars" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            </article>
+            <article class="metric-card metric-present">
+              <div class="metric-top"><span class="metric-label">Present today</span><span class="metric-icon icon-mint"><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M11 19s7-3.5 7-9V5l-7-3-7 3v5c0 5.5 7 9 7 9Z"/><path d="m8 10 2 2 4-4"/></svg></span></div>
+              <div class="metric-number-row"><strong class="metric-number">231</strong><span class="metric-subtle">of 248</span></div>
+              <div class="metric-footnote">That's <strong class="positive-text">93.1%</strong> of your team</div>
+              <div class="attendance-track" aria-label="93 percent attendance"><span></span><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </article>
+            <article class="metric-card metric-leave">
+              <div class="metric-top"><span class="metric-label">On leave</span><span class="metric-icon icon-peach"><svg viewBox="0 0 22 22" aria-hidden="true"><rect x="3" y="5" width="16" height="14" rx="2.5"/><path d="M15 3v4M7 3v4M3 10h16M11 13v2m0 0h2"/></svg></span></div>
+              <div class="metric-number-row"><strong class="metric-number">12</strong><span class="trend-neutral">↗ +2 this week</span></div>
+              <div class="metric-footnote">Across <strong>4 departments</strong> today</div>
+              <div class="leave-avatars" aria-label="People on leave"><span class="avatar avatar-pink">SC</span><span class="avatar avatar-blue">MJ</span><span class="avatar avatar-orange">AP</span><span class="avatar avatar-purple">+9</span></div>
+            </article>
+            <article class="metric-card metric-openings">
+              <div class="metric-top"><span class="metric-label">Open positions</span><span class="metric-icon icon-yellow"><svg viewBox="0 0 22 22" aria-hidden="true"><rect x="3" y="6" width="16" height="13" rx="2.5"/><path d="M8 6V4.5A1.5 1.5 0 0 1 9.5 3h3A1.5 1.5 0 0 1 14 4.5V6m-11 4h16m-9-1v2"/></svg></span></div>
+              <div class="metric-number-row"><strong class="metric-number">08</strong><span class="trend-chip trend-hiring"><span class="hiring-dot"></span> Hiring</span></div>
+              <div class="metric-footnote">Across <strong>3 departments</strong></div>
+              <div class="opening-footer"><div class="opening-depts"><span title="Engineering"></span><span title="Design"></span><span title="Marketing"></span></div><span>+ 5 more</span></div>
+            </article>
+          </section>
+
+          <section class="insights-grid">
+            <article class="panel attendance-panel">
+              <div class="panel-heading"><div><h2>Team attendance</h2><p>Attendance trends over the last 8 months</p></div><button class="select-button" type="button" data-toast="Showing the last 8 months">Last 8 months<svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></button></div>
+              <div class="chart-legend"><span><i class="legend-dot legend-attendance"></i> Attendance</span><span><i class="legend-dot legend-remote"></i> Remote</span><strong><span class="legend-extra"></span>93.4%</strong><span class="legend-period">average this year</span></div>
+              <div class="chart-wrap">
+                <div class="chart-y-labels" aria-hidden="true"><span>100%</span><span>75%</span><span>50%</span><span>25%</span><span>0%</span></div>
+                <div class="chart-main">
+                  <div class="chart-grid" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+                  <svg class="attendance-chart" viewBox="0 0 680 184" preserveAspectRatio="none" role="img" aria-label="Line chart showing attendance rising and remaining between 89 and 97 percent and remote work between 40 and 65 percent from March to October">
+                    <defs><linearGradient id="attendance-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#755cf4" stop-opacity=".17"/><stop offset="100%" stop-color="#755cf4" stop-opacity="0"/></linearGradient></defs>
+                    <path class="chart-area" d="M18 36 C52 36 62 50 106 47 S162 19 194 27 S250 60 282 47 S333 27 370 34 S426 60 458 48 S512 19 546 29 S605 43 662 20 V164 H18 Z"/>
+                    <path class="chart-line chart-line-remote" d="M18 112 C52 100 74 131 106 119 S160 99 194 112 S252 127 282 111 S341 92 370 103 S425 135 458 119 S514 104 546 117 S614 90 662 102"/>
+                    <path class="chart-line chart-line-main" d="M18 36 C52 36 62 50 106 47 S162 19 194 27 S250 60 282 47 S333 27 370 34 S426 60 458 48 S512 19 546 29 S605 43 662 20"/>
+                    <circle class="chart-marker marker-first" cx="458" cy="48" r="5"/><circle class="chart-marker marker-last" cx="662" cy="20" r="5"/>
+                    <rect class="chart-tooltip" x="403" y="5" width="104" height="34" rx="8"/><text class="chart-tooltip-label" x="455" y="19" text-anchor="middle">SEPTEMBER</text><text class="chart-tooltip-number" x="455" y="31" text-anchor="middle">94.2%</text>
+                  </svg>
+                  <div class="chart-x-labels" aria-hidden="true"><span>MAR</span><span>APR</span><span>MAY</span><span>JUN</span><span>JUL</span><span>AUG</span><span>SEP</span><span>OCT</span></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="panel leave-panel">
+              <div class="panel-heading"><div><h2>Leave requests <span class="heading-count" id="pending-count">03</span></h2><p>Your team's waiting on you</p></div><button class="text-link" type="button" data-page="Time off">View all <span>↗</span></button></div>
+              <div class="leave-list" id="dashboard-leave-list"><div class="loading-state">Loading leave requests…</div></div>
+            </article>
+          </section>
+
+          <section class="bottom-grid">
+            <article class="panel employees-panel">
+              <div class="panel-heading employee-panel-heading">
+                <div><h2>People at Layers <span class="heading-count heading-count-purple" id="team-count">08</span></h2><p>The wonderful humans behind everything.</p></div>
+                <div class="employee-tools">
+                  <label class="search-box"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="m13 13 4 4"/></svg><input id="employee-search" type="search" placeholder="Find someone..." aria-label="Search employees" /></label>
+                  <label class="filter-button filter-control"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M6 10h8m-5 5h2"/></svg><select id="department-filter" aria-label="Filter employees by department"><option value="">All teams</option><option>Design</option><option>Engineering</option><option>Marketing</option><option>People</option><option>Product</option><option>Sales</option><option>Finance</option></select><svg class="filter-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></label>
+                </div>
+              </div>
+              <div class="employee-table-wrap">
+                <table class="employee-table">
+                  <thead><tr><th scope="col"><label class="checkbox-label"><input id="select-all-employees" type="checkbox" aria-label="Select all employees" /><span></span></label><button type="button" class="sort-heading" data-toast="People are sorted alphabetically">NAME <span>↕</span></button></th><th scope="col">JOB TITLE</th><th scope="col">DEPARTMENT</th><th scope="col">STATUS</th><th scope="col"></th></tr></thead>
+                  <tbody id="employee-table-body"><tr><td colspan="5" class="loading-state">Loading your people…</td></tr></tbody>
+                </table>
+              </div>
+              <div class="table-footer"><span id="table-footer-count">Showing 8 of 248 employees</span><div class="pagination"><button class="pagination-button" disabled type="button" aria-label="Previous page"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m10 3-5 5 5 5"/></svg></button><span class="page-number"><strong>1</strong> / 1</span><button class="pagination-button" disabled type="button" aria-label="Next page"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></button></div></div>
+            </article>
+
+            <article class="panel upcoming-panel">
+              <div class="panel-heading"><div><h2>Coming up <span class="sparkle-heading">✳</span></h2><p>A little heads-up for your week</p></div><button class="icon-button calendar-button" type="button" data-toast="Your October calendar is up to date." aria-label="Open calendar"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="4.5" width="14" height="13" rx="2"/><path d="M6.5 2.5v4m7-4v4m-10.5 1h14"/></svg></button></div>
+              <div class="upcoming-date-banner"><div><span>THIS WEEK</span><strong>A few lovely things to look forward to.</strong></div><span class="sun-illustration" aria-hidden="true">☀</span></div>
+              <div class="event-list">
+                <div class="event-row"><div class="event-date"><strong>16</strong><span>OCT</span></div><span class="event-type event-birthday">🎂</span><div class="event-copy"><strong>Birthday celebration</strong><span>Natali Craig <i></i> Design team</span></div><span class="event-time">09:30</span></div>
+                <div class="event-row"><div class="event-date"><strong>17</strong><span>OCT</span></div><span class="event-type event-meeting"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="4" width="14" height="13" rx="2"/><path d="M6.5 2.5v4m7-4v4m-10.5 1h14M7 11h2m3 0h2m-7 3h2"/></svg></span><div class="event-copy"><strong>People sync</strong><span>Monthly team catch-up <i></i> 45 min</span></div><span class="event-time">11:00</span></div>
+                <div class="event-row"><div class="event-date"><strong>18</strong><span>OCT</span></div><span class="event-type event-welcome">✳</span><div class="event-copy"><strong>New teammate!</strong><span>Jamie Park <i></i> Starts today 🎉</span></div><span class="event-time">All day</span></div>
+              </div>
+              <button class="calendar-footer" type="button" data-page="Reports">Open team calendar <span>↗</span></button>
+            </article>
+          </section>
+          <footer class="page-footer"><span>Made for people, by people <span>✳</span></span><span>PeoplePulse <i>·</i> Your workspace, working smarter.</span></footer>
+        </section>
+      </main>
+      <div class="sidebar-scrim" id="sidebar-scrim"></div>
+    </div>
+
+    <dialog class="employee-dialog" id="employee-dialog" aria-labelledby="dialog-title">
+      <form class="employee-form" id="employee-form">
+        <div class="dialog-header"><span class="dialog-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 20v-1.8a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4V20"/><circle cx="9.5" cy="7.5" r="4"/><path d="M19 8v6m-3-3h6"/></svg></span><button class="dialog-close" id="close-dialog" type="button" aria-label="Close dialog">×</button></div>
+        <h2 id="dialog-title">Let's meet your new teammate.</h2>
+        <p>Add someone to the team. You can update their details anytime.</p>
+        <label for="employee-name">Full name <span>*</span><input id="employee-name" name="name" type="text" placeholder="e.g. Jamie Park" required maxlength="80" /></label>
+        <label for="employee-email">Work email <span>*</span><input id="employee-email" name="email" type="email" placeholder="jamie@company.com" required maxlength="254" /></label>
+        <div class="form-row"><label for="employee-role">Job title <span>*</span><input id="employee-role" name="role" type="text" placeholder="e.g. Product Designer" required maxlength="100" /></label><label for="employee-department">Department <span>*</span><select id="employee-department" name="department" required><option value="">Choose a team</option><option>Design</option><option>Engineering</option><option>Marketing</option><option>People</option><option>Product</option><option>Sales</option><option>Finance</option></select></label></div>
+        <div class="dialog-actions"><button class="cancel-button" id="cancel-dialog" type="button">Maybe later</button><button class="primary-button" type="submit" id="save-employee-button"><span>Add to team</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg></button></div>
+      </form>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"><span class="toast-check">✓</span><span id="toast-message"></span></div>
+  </body>
+</html>
